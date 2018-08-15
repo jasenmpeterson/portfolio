@@ -13,6 +13,14 @@ export default {
   name: "home",
   components: {
     HelloWorld
+  },
+  methods: {
+    getComponentData: function() {
+      //this.$store.dispatch("getSinglePageData");
+    }
+  },
+  created: function() {
+    this.getComponentData();
   }
 };
 </script>
