@@ -23,6 +23,7 @@ const actions = {
         resolve(pages);
         commit(types.STORE_FETCHED_PAGES, { pages });
         commit(types.PAGES_LOADED, true);
+        commit(types.INCREMENT_LOADING_PROGRESS);
       });
     });
   },

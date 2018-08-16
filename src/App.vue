@@ -1,29 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    
+    <transition
+          name="loader-animation"
+          enter-active-class="animated fadeIn"
+          leave-active-class="animated fadeOut">
+        <div class="progress loader" v-if="showLoader">
+          <div class="progress-bar" role="progressbar" :style="loaderStyle" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </transition>
+
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import { mapGetters } from "vuex";
+
+export default {
+  data() {
+    return {
+      showLoader: true
+    };
+  },
+  computed: {
+    ...mapGetters({
+      isLoading: "isLoading",
+      loadingProgress: "loadingProgress"
+    }),
+
+    loaderStyle() {
+      return `width: ${this.loadingProgress}%;`;
+    }
+  },
+  watch: {
+    isLoading(val) {
+      if (val == false) {
+        let self = this;
+        setTimeout(function() {
+          self.showLoader = false;
+        }, 1000);
+      }
     }
   }
-}
-</style>
+};
+</script>
