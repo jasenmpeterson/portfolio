@@ -14,6 +14,11 @@
   </div>
 </template>
 
+<style lang="scss">
+@import "./assets/scss/global.scss";
+</style>
+
+
 <script>
 import { mapGetters } from "vuex";
 

@@ -1,0 +1,40 @@
+h1 {
+    @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+}
+
+h2 {
+    @include sassline($fontsize: beta, $font: $headingtype, $lineheight: 2.5, $below: 1, $breakpoint: all);
+}
+
+h3 {
+    @include sassline($fontsize: gamma, $font: $headingtype, $lineheight: 2, $below: 1, $breakpoint: all);
+}
+
+h4 {
+    @include sassline($fontsize: delta, $font: $headingtype, $lineheight: 2, $below: 1, $breakpoint: all);
+}
+
+h5 {
+    @include sassline($fontsize: zeta, $font: $headingtype, $lineheight: 1.5, $below: 1, $breakpoint: all);
+}
+
+h6 {
+    @include sassline($fontsize: eta, $font: $headingtype, $lineheight: 1.5, $below: 1, $breakpoint: all);
+}
+
+p,
+li {
+    @include sassline($fontsize: theta, $font: $bodytype, $lineheight: 1.8, $below: 1, $breakpoint: all);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-align__center {
+    text-align: center;
+}
+
+.text-align__right {
+    text-align: right;
+}
