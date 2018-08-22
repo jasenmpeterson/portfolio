@@ -20,10 +20,14 @@ const actions = {
   async getAllPages({ commit }) {
     return new Promise(resolve => {
       api.getPages(pages => {
-        resolve(pages);
-        commit(types.STORE_FETCHED_PAGES, { pages });
-        commit(types.PAGES_LOADED, true);
-        commit(types.INCREMENT_LOADING_PROGRESS);
+        if (pages) {
+          resolve(pages);
+          commit(types.STORE_FETCHED_PAGES, { pages });
+          commit(types.PAGES_LOADED, true);
+          commit(types.INCREMENT_LOADING_PROGRESS);
+        } else {
+          console.log("error");
+        }
       });
     });
   },
