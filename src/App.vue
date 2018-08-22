@@ -14,8 +14,8 @@
   </div>
 </template>
 
-<style lang="scss">
-@import "./assets/scss/global.scss";
+<style>
+@import "./assets/css/main.css";
 </style>
 
 
