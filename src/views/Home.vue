@@ -1,11 +1,8 @@
 <template>
   <div class="home">
     <div v-for="(pageContent, i) in content" :key="i">
-      <h1 class="sm:text-lg md:text-4xl lg:text-5xl">{{ pageContent.data.page_title[i].text }}</h1>
+      <h1 class="sm:text-lg md:text-4xl lg:text-5xl">{{ pageContent.data.home_content[i].text }}</h1>
     </div>
-    <p>To embed your selected fonts into a webpage, copy this code into th of your HTML document.</p>
-    <h2>Lorem</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sit quos ab, iste vero voluptatem tempora quo nulla odit itaque ut quae illo tempore laboriosam mollitia, eum quaerat optio quibusdam?</p>
   </div>
 </template>
 
