@@ -1,0 +1,4 @@
+.page__home {
+  background: url("~@/assets/images/bg__home.jpg") left top;
+  background-size: cover;
+}

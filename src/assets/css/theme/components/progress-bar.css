@@ -1,0 +1,11 @@
+.progress {
+  margin: auto;
+  top: 15rem;
+  background: config('colors.gray-blue');
+}
+
+.progress-bar {
+  margin: 0 auto;
+  background: config('colors.portfolio-red');
+  transition: all 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}

@@ -1,16 +1,12 @@
 <template>
   <div id="app">
     
-    <transition
-          name="loader-animation"
-          enter-active-class="animated fadeIn"
-          leave-active-class="animated fadeOut">
-        <div class="progress loader" v-if="showLoader">
-          <div class="progress-bar" role="progressbar" :style="loaderStyle" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </transition>
-
     <router-view/>
+
+    <div class="progress loader absolute pin w-1/4 h-1 rounded-lg" v-if="showLoader">
+      <div class="progress-bar h-1 rounded-lg absolute pin-l" role="progressbar" :style="loaderStyle" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    
   </div>
 </template>
 
