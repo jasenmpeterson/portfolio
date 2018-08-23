@@ -167,7 +167,7 @@ module.exports = {
   */
 
   screens: {
-    'sm': '576px',
+    'sm': '320px',
     'md': '768px',
     'lg': '992px',
     'xl': '1200px',
@@ -194,6 +194,7 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Open Sans',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -208,6 +209,7 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
+      'Didact Gothic',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
