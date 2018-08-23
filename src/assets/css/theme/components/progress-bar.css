@@ -2,14 +2,7 @@
   margin: auto;
   top: 15rem;
   background: config('colors.gray-blue');
-  transition: visibility 0s linear 0.3s, opacity 0.3s;
 }
-
-.progress.remove {
-  opacity: 0;
-  visibility:  hidden;
-}
-
 
 .progress-bar {
   margin: 0 auto;
