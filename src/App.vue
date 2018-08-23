@@ -3,9 +3,12 @@
     
     <router-view/>
 
-    <div class="progress loader absolute pin w-1/4 h-1 rounded-lg" v-bind:class="{ remove: hideLoader }">
-      <div class="progress-bar h-1 rounded-lg absolute pin-l" role="progressbar" :style="loaderStyle" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
+    <transition
+          name="loader-animation">
+        <div class="progress loader absolute pin w-1/4 h-1 rounded-lg" v-if="showLoader">
+          <div class="progress-bar h-1 rounded-lg absolute pin-l" role="progressbar" :style="loaderStyle" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </transition>
 
   </div>
 </template>
@@ -21,7 +24,7 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      hideLoader: false
+      showLoader: true
     };
   },
   computed: {
@@ -39,7 +42,7 @@ export default {
       if (val == false) {
         let self = this;
         setTimeout(function() {
-          self.hideLoader = true;
+          self.showLoader = false;
         }, 1000);
       }
     }
