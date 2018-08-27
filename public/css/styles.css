@@ -61,3 +61,6 @@
   * @import "utilities/skew-transforms";
   */
 @import "theme/typography";
+@import "theme/pages/home/index";
+@import "theme/components/progress-bar";
+@import "theme/animations/index";
