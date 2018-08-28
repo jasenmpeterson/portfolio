@@ -1,5 +1,6 @@
 html {
   @apply .font-serif;
+  color: config('colors.gray-blue');
 }
 
 * {
@@ -16,7 +17,31 @@ h6 {
   @apply .font-sans;
 }
 
-h1,
-h2 {
+h1 {
   color: config('colors.anti-flash-white');
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+  line-height: 1.5rem;
 }

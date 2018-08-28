@@ -3,10 +3,14 @@
     
     <router-view/>
 
-    <transition
-          name="loader-animation">
-        <div class="progress loader absolute pin w-1/4 h-1 rounded-lg" v-if="showLoader">
-          <div class="progress-bar h-1 rounded-lg absolute pin-l" role="progressbar" :style="loaderStyle" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    <transition name="loader-animation">
+        <div class="progress-bar__wrap absolute pin flex flex-col" v-if="showLoader">
+          <div class="container m-auto">
+            <h1 class="sm:text-lg md:text-3xl text-center">Hi.</h1>
+            <div class="progress loader w-1/4 h-1 rounded-lg">
+                <div class="progress-bar h-1 rounded-lg absolute pin-l" role="progressbar" :style="loaderStyle" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
         </div>
     </transition>
 
