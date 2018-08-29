@@ -104,3 +104,36 @@
   }
 }
 
+/**
+ * ----------------------------------------
+ * theme
+ * ----------------------------------------
+ */
+
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.animated * {
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animated h1 {
+  animation-delay: 1.3s;
+}
+
+.animated h2 {
+  animation-delay: 1.4s;
+}
+
+.animated p {
+  animation-delay: 1.5s;
+}

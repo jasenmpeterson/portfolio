@@ -32,7 +32,9 @@ const actions = {
     });
   },
   async getPage({ commit, dispatch, state }, id) {
-    await dispatch("getAllPages");
+    if (!state.all[0]) {
+      await dispatch("getAllPages");
+    }
     commit(types.STORE_FETCHED_PAGE, { state, id });
   }
 };

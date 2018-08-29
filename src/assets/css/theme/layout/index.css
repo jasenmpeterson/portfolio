@@ -1,3 +1,17 @@
 html {
   overflow-y: scroll;
 }
+
+a {
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+a,
+a:visited {
+  color: config('colors.gun-metal');
+}
+
+a:hover {
+  color: config('colors.medium-candy-apple-red');
+}

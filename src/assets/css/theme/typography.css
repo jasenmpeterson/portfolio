@@ -43,5 +43,5 @@ h6 {
 }
 
 p {
-  @apply .leading-normal;
+  @apply .leading-normal mb-2;
 }

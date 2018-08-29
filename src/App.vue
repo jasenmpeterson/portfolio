@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    
-    <router-view/>
 
+    <transition name="fade">
+      <router-view/>
+    </transition>
+    
     <transition name="loader-animation">
         <div class="progress-bar__wrap absolute pin flex flex-col" v-if="showLoader">
           <div class="container m-auto">
