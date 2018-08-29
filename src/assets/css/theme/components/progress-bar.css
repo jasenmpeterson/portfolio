@@ -1,8 +1,10 @@
+.progress-bar__wrap {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 .progress {
   margin: auto;
-  top: 15rem;
   background: config('colors.gray-blue');
-  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .progress-bar {
@@ -13,5 +15,5 @@
 
 .loader-animation-enter,
 .loader-animation-leave-to {
-  animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
