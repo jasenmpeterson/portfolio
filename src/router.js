@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Intro from "./views/Intro.vue";
 
 Vue.use(Router);
 
@@ -10,12 +10,21 @@ const router = new Router({
   routes: [
     {
       path: "/",
+      name: "Intro",
+      component: Intro
+    },
+    {
+      path: "/home",
       name: "home",
-      component: Home
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Home.vue")
     },
     {
       path: "/portfolio",
-      name: "portfolio",
+      name: "Portfolio",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -24,7 +33,7 @@ const router = new Router({
     },
     {
       path: "/contact",
-      name: "contact",
+      name: "Contact",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

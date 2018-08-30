@@ -2,11 +2,11 @@ html {
   overflow-y: scroll;
 }
 
-header {
+.header__site-header {
   @apply p-10;
 }
 
-header h1 {
+.header__site-header h1 {
   color: config('colors.gray-blue');
 }
 

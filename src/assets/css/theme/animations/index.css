@@ -106,7 +106,7 @@
 
 /**
  * ----------------------------------------
- * theme
+ * vue transition - fade
  * ----------------------------------------
  */
 
@@ -124,18 +124,22 @@
   opacity: 0;
 }
 
-.animated * {
-  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+/**
+ * ----------------------------------------
+ * vue transition - slide-in-right
+ * ----------------------------------------
+ */
+
+.slide-in-right-enter-to {
+  transform: translateX(0);
+  opacity: 1;
 }
 
-.animated h1 {
-  animation-delay: 1.3s;
+.slide-in-right-enter-active {
+  transition: all 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
-.animated h2 {
-  animation-delay: 1.4s;
-}
-
-.animated p {
-  animation-delay: 1.5s;
+.slide-in-right-enter {
+  transform: translateX(20px);
+  opacity: 0;
 }
