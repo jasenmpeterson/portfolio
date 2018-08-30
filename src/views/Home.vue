@@ -55,6 +55,10 @@ export default {
   max-width: 600px;
 }
 
+h1 {
+  margin-bottom: 0;
+}
+
 a {
   font-weight: 700;
 }

@@ -14,7 +14,7 @@ export default {
         cb(response.results);
       })
       .catch(e => {
-        return e;
+        console.log(e);
       });
   }
 };

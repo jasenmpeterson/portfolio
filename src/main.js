@@ -16,6 +16,7 @@ new Vue({
   created() {
     this.$store.commit(types.RESET_LOADING_PROGRESS);
     this.$store.dispatch("getAllPages");
+    this.$store.dispatch("getSiteDetails");
   },
   render: h => h(App)
 }).$mount("#app");
