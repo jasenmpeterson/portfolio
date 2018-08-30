@@ -1,7 +1,7 @@
 <template>
-  <div class="flex min-h-screen page page__site-intro">
+  <div class="flex min-h-screen page page__site-intro" v-if="showLoader">
     <transition name="loader-animation">
-        <div class="progress-bar__wrap absolute pin flex flex-col" v-if="showLoader">
+        <div class="progress-bar__wrap absolute pin flex flex-col">
           <div class="container m-auto">
             <h1 class="sm:text-lg md:text-3xl text-center">hi.</h1>
             <div class="progress loader w-1/4 h-1 rounded-lg relative">
@@ -14,7 +14,6 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import router from "../router.js";
 
 export default {
   name: "siteIntro",
@@ -46,7 +45,6 @@ export default {
         let self = this;
         setTimeout(function() {
           self.showLoader = false;
-          router.push("home");
         }, 1000);
       }
     }
