@@ -19,17 +19,11 @@
 
 <script>
 import { mapGetters } from "vuex";
-import progressLoader from "./Intro";
+import progressLoader from "./ProgressLoader";
 
 export default {
   name: "home",
-  data() {
-    return {
-      dataHasLoaded: false,
-      dataHasNotLoaded: true
-    };
-  },
-  mounted: function() {
+  beforeMount: function() {
     this.$store.dispatch("getPage", "home");
   },
   computed: {
@@ -37,17 +31,6 @@ export default {
       content: "pageContent",
       isLoading: "isLoading"
     })
-  },
-  watch: {
-    isLoading(val) {
-      if (val == false) {
-        let self = this;
-        setTimeout(function() {
-          self.dataHasLoaded = true;
-          self.dataHasNotLoaded = false;
-        }, 1000);
-      }
-    }
   },
   components: {
     progressLoader
