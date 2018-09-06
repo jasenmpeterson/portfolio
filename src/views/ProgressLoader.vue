@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="flex min-h-screen page page__site-intro" v-if="showLoader">
+    <div class="flex min-h-screen page page__site-intro" v-if="showLoader && allPagesLoaded != true">
       <div class="progress-bar__wrap absolute pin flex flex-col">
         <div class="container m-auto">
           <h1 class="sm:text-lg md:text-3xl text-center">hi.</h1>
@@ -27,7 +27,8 @@ export default {
     ...mapGetters({
       isLoading: "isLoading",
       loadingProgress: "loadingProgress",
-      websiteDetails: "websiteDetails"
+      websiteDetails: "websiteDetails",
+      allPagesLoaded: "allPagesLoaded"
     }),
 
     loaderStyle() {

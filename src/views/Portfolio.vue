@@ -1,9 +1,12 @@
 <template>
-  <div></div>
+  <div class="page-wrap">
+    <progressLoader/>
+  </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import progressLoader from "./ProgressLoader";
 
 export default {
   name: "portfolio",
@@ -32,6 +35,9 @@ export default {
         }, 1000);
       }
     }
+  },
+  components: {
+    progressLoader
   }
 };
 </script>
