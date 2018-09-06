@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="flex min-h-screen page page__site-intro" v-if="showLoader && allPagesLoaded != true">
+    <div class="flex min-h-screen page page__site-intro" v-if="showLoader">
       <div class="progress-bar__wrap absolute pin flex flex-col">
         <div class="container m-auto">
           <h1 class="sm:text-lg md:text-3xl text-center">hi.</h1>
@@ -19,7 +19,6 @@ export default {
   name: "siteIntro",
   data() {
     return {
-      showLoader: true,
       websiteTitle: null
     };
   },
@@ -28,7 +27,8 @@ export default {
       isLoading: "isLoading",
       loadingProgress: "loadingProgress",
       websiteDetails: "websiteDetails",
-      allPagesLoaded: "allPagesLoaded"
+      allPagesLoaded: "allPagesLoaded",
+      showLoader: "showLoader"
     }),
 
     loaderStyle() {

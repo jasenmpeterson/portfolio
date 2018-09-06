@@ -7,14 +7,16 @@ const state = {
   loaded: false,
   page: null,
   pageName: null,
-  siteDetails: null
+  siteDetails: null,
+  showLoader: true
 };
 
 const getters = {
   allPages: state => state.all,
   allPagesLoaded: state => state.loaded,
   pageContent: state => state.page,
-  websiteDetails: state => state.siteDetails
+  websiteDetails: state => state.siteDetails,
+  showLoader: state => state.showLoader
 };
 
 // actions
@@ -38,6 +40,7 @@ const actions = {
       await dispatch("getAllPages");
     }
     commit(types.STORE_FETCHED_PAGE, { state, id });
+    commit(types.SHOW_LOADER, { state });
   },
   async getSiteDetails({ commit, dispatch, state }) {
     await dispatch("getAllPages");
@@ -62,6 +65,9 @@ const mutations = {
       content => content.uid === "site_details"
     );
     state.siteDetails = siteDetails;
+  },
+  [types.SHOW_LOADER](state) {
+    state.showLoader = false;
   }
 };
 
