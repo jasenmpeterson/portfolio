@@ -40,14 +40,6 @@ export default {
       if (val[0] !== undefined && val[0] !== null) {
         this.websiteTitle = val[0].data.website_title[0].text;
       }
-    },
-    isLoading(val) {
-      if (val == false) {
-        let self = this;
-        setTimeout(function() {
-          self.showLoader = false;
-        }, 1000);
-      }
     }
   }
 };
